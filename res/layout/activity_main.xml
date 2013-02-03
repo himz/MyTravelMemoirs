@@ -4,11 +4,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
-    <TextView
+    <Button
+        android:id="@+id/btnOldTrips"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="56dp"
+        android:text="View Old Trips" />
+
+    <Button
+        android:id="@+id/btnNewTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:text="@string/hello_world" />
+        android:layout_marginRight="30dp"
+        android:text="Create new Trip" />
+
+    <Button
+        android:id="@+id/btnCurrentTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="41dp"
+        android:text="Current Trip" />
 
 </RelativeLayout>

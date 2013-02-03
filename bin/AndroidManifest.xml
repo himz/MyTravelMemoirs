@@ -22,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.mpcs.mytravelmemoirs.CreateTripActivity"
+            android:label="@string/title_activity_create_trip" >
+        </activity>
+        <activity
+            android:name="com.mpcs.mytravelmemoirs.TripInfoActivity"
+            android:label="@string/title_activity_trip_info" >
+        </activity>
     </application>
 
 </manifest>

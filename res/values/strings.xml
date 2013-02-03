@@ -4,5 +4,7 @@
     <string name="app_name">MyTravelMemoirs</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="title_activity_create_trip">CreateTripActivity</string>
+    <string name="title_activity_trip_info">TripInfoActivity</string>
 
 </resources>
