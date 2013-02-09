@@ -12,27 +12,36 @@ import android.widget.Toast;
 
 public class CreateTripActivity extends Activity {
 
+	private TripDbAdapter db;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_create_trip);
 		Button btnStart = (Button) findViewById(R.id.button1);
 		btnStart.setOnClickListener(myhandler);
-		
-		
+		db = new TripDbAdapter(this);
+		db.open();
 	}
 
 	
 	
 	View.OnClickListener myhandler = new View.OnClickListener() {
 
-		@Override
 		public void onClick(View v) {
+			int id=1;
+			
 			Context context = getApplicationContext();
 			EditText txtTripName = (EditText)findViewById(R.id.editText1);
 			Intent i = new Intent( CreateTripActivity.this , TripInfoActivity.class);
 			i.putExtra("tripName", txtTripName.getText().toString());
 			startActivity(i);
+			
+			String tripname=txtTripName.getText().toString();
+			
+			db.createTrip(id, tripname);
+			
+			id++;
 			
 			//finish();
 			

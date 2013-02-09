@@ -23,7 +23,6 @@ public class MainActivity extends Activity {
 
 	View.OnClickListener myhandler = new View.OnClickListener() {
 
-		@Override
 		public void onClick(View v) {
 			Context context = getApplicationContext();
 			CharSequence text = "Hello toast!";
