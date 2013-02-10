@@ -27,6 +27,10 @@
             android:label="@string/title_activity_create_trip" >
         </activity>
         <activity
+            android:name="com.mpcs.mytravelmemoirs.ViewOldTripsActivity"
+            android:label="@string/title_activity_view_old_trips" >
+        </activity>
+        <activity
             android:name="com.mpcs.mytravelmemoirs.TripInfoActivity"
             android:label="@string/title_activity_trip_info" >
         </activity>

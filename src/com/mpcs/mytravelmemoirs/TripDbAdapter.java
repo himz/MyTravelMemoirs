@@ -18,6 +18,7 @@ package com.mpcs.mytravelmemoirs;
 
 import android.app.Application;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -167,6 +168,17 @@ public class TripDbAdapter {
     public void deletePhoto(int id)
     {
 
+    }
+    
+    public Cursor getAllTrips()
+    {
+    	System.out.println("Fetching all the trips");
+		Toast.makeText(this.mCtx, "fetching the trips", Toast.LENGTH_LONG).show();
+
+
+    	return mDb.query("Trips", new String[] {trip_id, trip_name}, null, null, null, null, null);
+
+    	
     }
 
 }

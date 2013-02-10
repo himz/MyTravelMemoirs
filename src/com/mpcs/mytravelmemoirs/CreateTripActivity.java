@@ -1,14 +1,13 @@
 package com.mpcs.mytravelmemoirs;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class CreateTripActivity extends Activity {
 
@@ -39,12 +38,17 @@ public class CreateTripActivity extends Activity {
 			
 			String tripname=txtTripName.getText().toString();
 			
-			db.createTrip(id, tripname);
-			
+			db.createTrip(id, "trip1");
+			id++;
+			db.createTrip(id, "trip2");
+			id++;
+			db.createTrip(id, "trip3");
+			id++;
+			db.createTrip(id, "trip4");
 			id++;
 			
 			//finish();
-			
+			System.out.println();
 			
 
 		}
