@@ -20,6 +20,8 @@ public class MainActivity extends Activity {
 
 		Button btnOldTrips = (Button) findViewById(R.id.btnOldTrips);		
 		
+		Button googleMaps = (Button) findViewById(R.id.maps);
+		
 
 
 
@@ -57,6 +59,25 @@ public class MainActivity extends Activity {
             }
         }); 
 
+		
+		googleMaps.setOnClickListener(new View.OnClickListener() {
+
+			private Context context = getApplicationContext();
+
+            public void onClick(View v) {
+            	
+				Intent i3 = new Intent(MainActivity.this, ViewGoogleMapsActivity.class);
+				
+				Toast.makeText(this.context, "Calling Google Maps", Toast.LENGTH_LONG).show();
+
+                startActivity(i3);
+
+            }
+        }); 
+		
+		
+		
+		
 		}
 
 

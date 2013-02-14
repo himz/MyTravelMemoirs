@@ -22,7 +22,7 @@ public class ViewOldTripsActivity extends ListActivity {
 		db = new TripDbAdapter(this);
 		db.open();
 		
-		listView=(ListView) findViewById(R.id.list);
+		//listView=(ListView) findViewById(R.id.list);
 		fillData();
 		
 	}
@@ -35,16 +35,20 @@ public class ViewOldTripsActivity extends ListActivity {
         startManagingCursor(TripsCursor);
 
         // Create an array to specify the fields we want to display in the list
+        System.out.println("value of trip cursor" + TripsCursor);
         
         String[] from = new String[] { TripDbAdapter.trip_name };
 
         // and an array of the fields we want to bind those fields to (in this
         // case just text1)
-        int[] to = new int[] { R.id.list};
+        int[] to = new int[] { R.id.text1};
 
         // Now create a simple cursor adapter and set it to display
-        ListAdapter trips = new SimpleCursorAdapter(this,R.layout.activity_view_old_trips, TripsCursor, from, to);
-        listView.setAdapter(trips);
+        //if(TripsCursor !=null)
+        //{
+        SimpleCursorAdapter trips = new SimpleCursorAdapter(this,R.layout.trips_row, TripsCursor, from, to);
+        
+        setListAdapter(trips);
 
         /*
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(

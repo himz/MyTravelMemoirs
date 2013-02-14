@@ -39,7 +39,7 @@ import android.content.ContentValues;
  */
 public class TripDbAdapter {
 
-    public static final String trip_id = "id";
+    public static final String trip_id = "_id";
     public static final String trip_name = "name";
    
 
@@ -56,10 +56,10 @@ public class TripDbAdapter {
     private Context mCtx;
     
     
-    private static String tripsCreate = "create table Trips ( id integer primary key autoincrement, name text not null);";
-	private static String tripDetailsCreate = "create table TripDetails( id integer primary key autoincrement, startLocationId integer not null, endLocationId integer not null, startDate date not null, endDate date not null);";
-	private static String locationsCreate = "create table Location( id integer primary key autoincrement, name text not null);" ;
-	private static String photosCreate = "create table Photos( id integer primary key autoincrement, name text not null);";
+    private static String tripsCreate = "create table Trips (_id integer primary key autoincrement, name text not null);";
+	private static String tripDetailsCreate = "create table TripDetails(_id integer primary key autoincrement, startLocationId integer not null, endLocationId integer not null, startDate date not null, endDate date not null);";
+	private static String locationsCreate = "create table Location(_id integer primary key autoincrement, name text not null);" ;
+	private static String photosCreate = "create table Photos(_id integer primary key autoincrement, name text not null);";
     private static final String TAG = "DBHelper";
     private static final String DATABASE_NAME = "TripIt";
     private static final String DATABASE_TABLE1 = "Trips";

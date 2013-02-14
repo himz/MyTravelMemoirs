@@ -23,9 +23,20 @@
         android:id="@+id/btnCurrentTrip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="30dp"
-        android:layout_marginLeft="41dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/btnNewTrip"
         android:text="Current Trip" />
+
+    <Button
+        android:id="@+id/maps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/btnCurrentTrip"
+        android:layout_below="@+id/btnOldTrips"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/btnOldTrips"
+        android:text="Google Maps" />
 
 </RelativeLayout>
