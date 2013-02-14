@@ -1,8 +1,10 @@
 package com.mpcs.mytravelmemoirs;
-import com.google.android.gms.maps.SupportMapFragment;
+
+
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import com.google.android.gms.maps.SupportMapFragment;
 
 
 public class ViewGoogleMapsActivity extends FragmentActivity 
@@ -17,5 +19,6 @@ public class ViewGoogleMapsActivity extends FragmentActivity
 	    getSupportFragmentManager().beginTransaction()
 	            .add(android.R.id.content, fragment).commit();
 	}
+	
 	
 }
